@@ -71,15 +71,15 @@
 // "В числе 9537 количество сотен: 5, десятков: 3, единиц: 7"
 
 
-//         let number = Number(prompt("Введите число"))      
-         
-//     let thousands = (number - (number % 1000)) / 1000;        // Получаем количество тысяч
-//     let hundreds = ((number % 1000) - (number % 100)) / 100; // Получаем количество сотен
-//     let tens = ((number % 100) - (number % 10)) / 10;        // Получаем количество десятков
-//     let ones = number % 10;
+        let number = Number(prompt("Введите число"))      
+    let tenthousand = (number - (number % 10000)) / 10000;     // Получаем 10к
+    let thousands = ((number % 10000) - (number % 1000)) / 1000;        // Получаем 1к
+    let hundreds = ((number % 1000) - (number % 100)) / 100; // Получаем количество сотен
+    let tens = ((number % 100) - (number % 10)) / 10;        // Получаем количество десятков
+    let ones = number % 10;
    
 
-// console.log(`В числе ${number} количество тысяч: ${thousands}, сотен: ${hundreds}, десятков: ${tens}, единиц: ${ones}`);
+console.log(`В числе ${number}  - тесядки тысяч : ${tenthousand}, тысяч:  ${thousands}, сотен: ${hundreds}, десятков: ${tens}, единиц: ${ones}`);
     
     
     </script>
