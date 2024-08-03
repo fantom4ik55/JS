@@ -12,10 +12,10 @@
 // Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2^3 степени + 3 ^ 3 степени
 
         
-        function num(a) {
-           return (a ** 3);
-        }
-        console.log(num(2) + num(3));
+        // function num(a) {
+        //    return (a ** 3);
+        // }
+        // console.log(num(2) + num(3));
 
 
 //Задание 2
@@ -23,18 +23,18 @@
 // Создать фукнцию, которая высчитывает 13% от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
 
 
-        let userMoney = Number(prompt('Введите число'))
+        //let userMoney = Number(prompt('Введите число'))
 
-        function moneyMonth(userMoney) {
-            return userMoney * 0.87;
+        //function moneyMonth(userMoney) {
+            //return userMoney * 0.87;
 
-        }
+       // }
          //Проверка что не ввели буквы
-        if (isNaN(userMoney)) {
-             console.log('Значение введено неверно. Пожалуйста, введите число.');
-            } else {
-             console.log(`Размер заработной платы за вычетом налогов равен ${moneyMonth(userMoney)}`);
-            }
+        //if (isNaN(userMoney)) {
+             //console.log('Значение введено неверно. Пожалуйста, введите число.');
+           // } else {
+           //  console.log(`Размер заработной платы за вычетом налогов равен ${moneyMonth(userMoney)}`);
+           // }
 
 // Задание 3
 // Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
@@ -45,11 +45,11 @@ let num3 = Number(prompt('Введите третье число '));
 
 function maxNumber(num1, num2, num3) {
   if(num1 >= num2 && num1 >= num3) {
-    console.log('Первое число максимальное');
+    console.log(`Первое число ${num1} максимальное`);
   } else if(num2 >= num1 && num2 >= num3) {
-    console.log('Второе число максимальное');
+    console.log(`Второе число ${num2} максимальное`);
   } else if(num3 >= num1 && num3 >= num2){
-    console.log('Третье число максимальное');
+    console.log(`Третье число ${num3} максимальное`);
   }
 }
 
@@ -64,42 +64,46 @@ maxNumber(num1, num2, num3);
 // 4. Деление
 // Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция сложения в данном примере, ваши названия функций могут отличаться). Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны. Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
 
-            function sum(a ,b) {
-                return a +b ;
-            }
-            console.log(sum(2, 6));
+            // function sum(a ,b) {
+            //     return a +b ;
+            // }
+            // console.log(sum(2, 6));
 
            
            
            
            
-            function humiliation(a ,b) {
-                return a * b ;
-            }
-            console.log(humiliation(2, 6));
+            // function humiliation(a ,b) {
+            //     return a * b ;
+            // }
+            // console.log(humiliation(2, 6));
 
             
             
             
             
-            function difference(a, b) {
-                 if (a === b) {
-                     return 0;
-                } else {
-                    return a > b ? a - b : b - a; // замена местами меньшим с большим через тернар
-                }
-            }
-            console.log(difference(2, 6));
+            // function difference(a, b) {
+            //     if (a === b) {
+            //         return 0;
+            //     } else if (a > b) {
+            //         return a - b;
+            //     } else {
+            //          console.log("Отнимать от меньшего большее нельзя");
+                     
+            //         }
+            //     }
+
+            //     console.log(difference(22, 23));
 
 
-            function division(a, b) {
-            if (b === 0) {
-                console.log('Деление на 0 невозможно');
-            } else {
-                return a / b;
-            }
-            }
-            console.log(division(0, 1));
+            // function division(a, b) {
+            // if (b === 0) {
+            //     console.log('Деление на 0 нельзя');
+            // } else {
+            //     return a / b;
+            // }
+            // }
+            // console.log(division(0, 1));
 
 
 
