@@ -19,16 +19,16 @@
 // 10 – четное число
 
 
-// for (let i = 0; i <= 11; i++) {
+for (let i = 0; i <= 11; i++) {
     
-//     if (i === 0) {
-//         console.log(`${i}– это ноль`);
-//     } else if (i % 2 !== 0){
-//         console.log(`${i}– нечетное число`);
-//     }else if(i % 2 === 0){
-//         console.log(`${i}– четное число`);
-//     }
-// }
+    if (i === 0) {
+        console.log(`${i}– это ноль`);
+    } else if (i % 2 !== 0){
+        console.log(`${i}– нечетное число`);
+    }else if(i % 2 === 0){
+        console.log(`${i}– четное число`);
+    }
+}
 
 
 
@@ -36,11 +36,11 @@
 // Дан массив [1, 2, 3, 4, 5, 6, 7]
 // Сделайте из этого массива следующий [1, 2, 3, 6, 7]
 
-// const arr = [1, 2, 3, 4, 5, 6, 7];
+const arr = [1, 2, 3, 4, 5, 6, 7];
 
-// arr.splice(3,2)
-// console.log(arr);
-// console.log(arr.length);
+arr.splice(3,2)
+console.log(arr);
+console.log(arr.length);
 
 
 
@@ -51,34 +51,34 @@
 // 3. Найти есть ли в этом массиве число 3
 
 
-//  const arr =  [];
-//  let sum =0;
-//  let min = Infinity; //Представляю что изначало min значение больше arr[i] вычитал в инте долго голову ломал как рандом сравнить  :))))
-//  let max = 0;
-//  let three ="";
-//  for (let i = 0; i < 5; i++) {
-//     arr[i] =  Math.floor(Math.random()*10);
-//     console.log(arr[i]);
+ const arr =  [];
+ let sum =0;
+ let min = Infinity; //Представляю что изначало min значение больше arr[i] вычитал в инте долго голову ломал как рандом сравнить  :))))
+ let max = 0;
+ let three ="";
+ for (let i = 0; i < 5; i++) {
+    arr[i] =  Math.floor(Math.random()*10);
+    console.log(arr[i]);
     
-//     sum = sum + arr[i]; 
+    sum = sum + arr[i]; 
 
 
-//     if (arr[i] < min) {
-//         min = arr[i];
-//     }
+    if (arr[i] < min) {
+        min = arr[i];
+    }
     
-//     if (arr[i] > max) {
-//         max = arr[i];
-//     } 
+    if (arr[i] > max) {
+        max = arr[i];
+    } 
 
-//     if (arr[i] === 3) {
-//         three = true;  
-//     } 
+    if (arr[i] === 3) {
+        three = true;  
+    } 
      
-// }    console.log(`${sum} -сумму элементов этого массива`);
-//      console.log(`${min} -минимальное число массива`);
-//      console.log(`${max} -маскимальное число массива`);
-//      console.log(`Есть 3 в этом массиве?: ${three ? 'Да' : 'Нет'}`);
+}    console.log(`${sum} -сумму элементов этого массива`);
+     console.log(`${min} -минимальное число массива`);
+     console.log(`${max} -маскимальное число массива`);
+     console.log(`Есть 3 в этом массиве?: ${three ? 'Да' : 'Нет'}`);
                                              // тернар   
  
 
@@ -86,13 +86,13 @@
 //4  Необходимо вывести горку в консоль (используя цикл for), как показано на рисунке, только у вашей горки должно быть 20 рядов, а не 5:
 
 
-// let row = "";
-// for (let i = 0; i <= 20; i++) {
-//     if (i > 0) {
-//      row = row +'x' ;
-//      console.log(row);
-//     }
-// }
+let row = "";
+for (let i = 0; i <= 20; i++) {
+    if (i > 0) {
+     row = row +'x' ;
+     console.log(row);
+    }
+}
 
 
 
@@ -108,21 +108,21 @@
 // которые делятся на 2, возведем в квадрат и выведем в консоль, а
 // числа, которые делятся на 3, возведем в куб и выведем в консоль.
 
-// let squere = 0;
-// let cub = 0;
-// const arr =[];
-// for (let i = 0; i < 10; i++) {
-//     arr[i] =  Math.floor(Math.random()*10);
+let squere = 0;
+let cub = 0;
+const arr =[];
+for (let i = 0; i < 10; i++) {
+    arr[i] =  Math.floor(Math.random()*10);
 
-//     if (arr[i] % 2 === 0) {
-//         squere =   arr[i] ** 2 ;
-//         console.log(`Число ${arr[i]} в квадрате: ${squere}`);
-//     }  
-//     if (arr[i] % 3 ===0 ) {
-//             cub = arr[i] ** 3;
-//             console.log(`Число ${arr[i]} в кубе: ${cub}`);
-//     }    
-// }console.log(arr);
+    if (arr[i] % 2 === 0) {
+        squere =   arr[i] ** 2 ;
+        console.log(`Число ${arr[i]} в квадрате: ${squere}`);
+    }  
+    if (arr[i] % 3 ===0 ) {
+            cub = arr[i] ** 3;
+            console.log(`Число ${arr[i]} в кубе: ${cub}`);
+    }    
+}console.log(arr);
 
 
 
@@ -131,9 +131,9 @@
 // С помощью метода splice преобразуйте массив в следующий:
 // [1, 4, 5]
 
-// const arr = [1, 2, 3, 4, 5];
-// arr.splice(1,2)
-// console.log(arr);
+const arr = [1, 2, 3, 4, 5];
+arr.splice(1,2)
+console.log(arr);
 
 
 
@@ -143,27 +143,27 @@
 //3. Дан массив const arr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
 // Подсчитайте количество цифр 3 в этом массиве
 
-// const arr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
-// cuont = 0;
-// for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === 3) {
-//         cuont ++;
-//     }
+const arr = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
+cuont = 0;
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 3) {
+        cuont ++;
+    }
     
-// } console.log(cuont);
+} console.log(cuont);
 
        /// Таже задача только в Math.random
 
-// const arrThree = [ ];
-// cuont = 0;
-// for (let i = 0; i < 11; i++) {
-//     arrThree[i] =  Math.floor(Math.random()*10);
-//     if (arrThree[i] === 3) {
-//         cuont ++;
-//     }
+const arrThree = [ ];
+cuont = 0;
+for (let i = 0; i < 11; i++) {
+    arrThree[i] =  Math.floor(Math.random()*10);
+    if (arrThree[i] === 3) {
+        cuont ++;
+    }
     
-// } console.log(arrThree);
-// console.log(`Rоличество цифр 3 в этом массиве = ${cuont}`);
+} console.log(arrThree);
+console.log(`Rоличество цифр 3 в этом массиве = ${cuont}`);
 
 
 
