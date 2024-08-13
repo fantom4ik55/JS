@@ -120,9 +120,13 @@ const products = [
 const productsFilter = products.filter(product => product.photos && product.photos.length > 0);
 console.log(productsFilter);
 
+//               
+// products.sort((a, b) => a.price - b.price);// если a и b поменять местами то в порядке убывания будет
 
-products.sort((a, b) => a.price - b.price);// если a и b поменять местами то в порядке убывания будет
-
+//                
+products.sort(function (a, b){
+    return a.price - b.price;
+} );
 console.log(products);
 
 
