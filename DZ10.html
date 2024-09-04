@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="from" type="text">
+В инпуте написано: <span></span>
+
+<br>
+
+<button class="messageBtn">Показать блок</button>
+<div class="message">
+  Привет :)
+</div>
+
+<br>
+
+<form>
+  <label>
+    Первый инпут:
+    <input class="form-control" type="text">
+  </label>
+  <br>
+  <br>
+  <label>
+    Второй инпут:
+    <select class="form-control">
+      <option value=""></option>
+      <option value="1">Один</option>
+      <option value="2">Два</option>
+    </select>
+  </label>
+  <br>
+  <br>
+  <button>Отправить</button>
+</form>
+
+
+<script>
+//1  1. При изменении значения в input с id="from", значение содержащееся в нем должно моментально отображаться в span. То есть при печати в input'е тег span также должен меняться.
+
+    const formEl = document.querySelector('#from') ;
+    console.log(formEl);
+    const spanEl = document.querySelector('span');
+
+    formEl.addEventListener('input', function (e) {
+         
+    });
+
+
+
+//2. При клике на кнопку с классом messageBtn необходимо элементу с классом message:
+// - добавить два класса: animate_animated и animate_fadeInLeftBig
+// - поставить данному элементу стиль visibility в значение 'visible'.
+
+
+    const messageBtnEl = document.querySelector('.messageBtn');
+    const messageEl = document.querySelector('.message');
+
+    messageBtnEl.addEventListener('click', function (e) {
+        messageEl.classList.add('animate_animated', 'animate_fadeInLeftBig');
+        messageEl.style.visibility = 'visible';
+     });
+
+
+    
+
+
+
+    
+// 3. Необходимо при отправке формы проверить, заполнены ли все поля в этой форме. Если какое-либо поле не заполнено, форма не должна отправляться, также должны быть подсвечены незаполненные поля (необходимо поставить класс error незаполненным полям). Как только пользователь начинает заполнять какое-либо поле, необходимо, при вводе в данное поле, произвести проверку:
+// - Если поле пустое, необходимо данное поле подсветить (поставить класс error данному полю).
+// - Если поле было чем-либо заполнено, подсветку (класс error) необходимо убрать.
+
+const form = document.querySelector('form');
+const formControlEl = document.querySelectorAll('.form-control');
+const btnEl = document.querySelector('form button'); // ловим кнопку в именно в форме
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); 
+  let isValid = true; 
+  
+  formControlEl.forEach((element) => {
+    if (element.tagName === 'INPUT' && element.type === 'text') {
+      isValid = isValid && isValidInput(element);
+      
+    } else if (element.tagName === 'SELECT') {
+      isValid = isValid && isValidSelect(element);
+    }
+    
+  });
+
+  if (isValid) {
+    console.log("Форма отправлена!");
+     
+    btnEl.textContent = 'Спасибо'; 
+  }  
+});
+
+function isValidInput(input) {
+  if (input.value.trim() === '') {
+    input.style.border = '1px solid red';
+    input.classList.add('error');
+    input.setCustomValidity('Обязательное поле');
+    input.reportValidity();
+    console.log('Форма не отправлена ');
+    return false; 
+  } else {
+    input.style.border = '';
+    input.classList.remove('error');
+    input.setCustomValidity('');
+    return true; 
+  }
+}
+
+function isValidSelect(select) {
+  if (select.options[select.selectedIndex].value === '') {
+    select.style.border = '1px solid red';
+    select.classList.add('error');
+    select.setCustomValidity('Выберите значение');
+    select.reportValidity();
+    console.log('Форма не отправлена ');
+    return false; 
+  } else {
+    select.style.border = '';
+    select.classList.remove('error');
+    select.setCustomValidity('');
+    return true; 
+  }
+}
+
+formControlEl.forEach((e) => {
+  e.addEventListener('input', () => {
+    e.setCustomValidity('');
+    e.removeAttribute('style');
+    e.classList.remove('error');
+
+    if (e.tagName === 'INPUT' && e.type === 'text') {
+      isValidInput(e);
+       
+    } else if (e.tagName === 'SELECT') {
+      isValidSelect(e);
+       
+    }
+    
+  });
+  
+});
+
+</script>
+</body>
+</html>
