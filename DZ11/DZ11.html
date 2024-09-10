@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .content{
+        display: grid;
+        width: fit-content;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .content__img{
+        width: 450px;
+        margin-bottom: 10px;
+    }
+    .content__countre{
+        color: green;
+        margin-top: 50px;
+    }
+    .content__block{
+        padding: 10px;
+     width: fit-content;
+        border: 1px solid #000;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+</style>
+<body>
+
+
+
+
+<div class="content"></div>
+
+
+
+<script src="../data.js"></script>
+    <script>
+        
+        const data = JSON.parse(dataInfo);
+        console.log(data);
+
+
+        data.forEach(element => {
+    console.log(element.message);
+
+        const contebtEl = document.querySelector('.content');
+        const blockEl = document.createElement('div');
+        contebtEl.appendChild(blockEl);
+        blockEl.classList.add('content__block')
+        
+        const countreEl = document.createElement('h1');
+        blockEl.appendChild(countreEl);
+        countreEl.classList.add('content__countre')
+        countreEl.textContent = element.code ;
+
+        const nameEl = document.createElement('h2');
+        blockEl.appendChild(nameEl);
+        nameEl.classList.add('content__name')
+        nameEl.textContent = element.name;
+
+        const populationEl = document.createElement('p');
+        blockEl.appendChild(populationEl);
+        populationEl.classList.add('content__population');
+        populationEl.textContent = element.population
+
+        const imgEl = document.createElement('img');
+        imgEl.classList.add('content__img');
+        blockEl.appendChild(imgEl);
+        imgEl.src = element.message;
+         
+
+
+
+        });
+
+
+
+        
+
+         
+
+
+    </script>
+</body>
+</html>
