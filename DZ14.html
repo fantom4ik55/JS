@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+
+
+//Задание 1: "Управление библиотекой книг"
+// Реализуйте класс Book, который будет представлять книгу с указанными ниже
+// свойствами и методами:
+// ● Свойства:
+// ○ title (название) - строка, представляющая название книги.
+// ○ author (автор) - строка, представляющая имя автора книги.
+// ○ pages (количество страниц) - число, представляющее количество
+// страниц в книге.
+// ● Методы:
+// ○ displayInfo() - метод, который выводит информацию о книге в
+// формате: Название: {title}, Автор: {author}, Страниц:
+// {pages}.
+
+        class Book {
+            title = '';
+            author = '';
+            pages = '' ;
+            year = '';
+
+
+            constructor(title, author, pages, year ) {
+                this.title = title;
+                this.author = author;
+               
+                
+                this.pages = pages;
+                this.year = year;
+            }
+
+            
+            displayInfo() {
+            console.log(`Автор: ${this.title}, Название: ${this.title}, страниц: ${this.pages} год: ${this.year}`);
+                }
+            
+        }
+        const newbook = new Book('Александр Дюма ', 'Граф Монте-Кристо', 385, 1884    );
+        newbook.displayInfo();
+
+//Задание 2: "Управление списком студентов"
+// Реализуйте класс Student, который будет представлять студента с указанными ниже
+// свойствами и методами:
+// ● Свойства:
+// ○ name (имя) - строка, представляющая имя студента.
+// ○ age (возраст) - число, представляющее возраст студента.
+// ○ grade (класс) - строка, представляющая класс, в котором учится студент.
+// ● Методы:
+// ○ displayInfo() - метод, который выводит информацию о студенте в
+// формате: Name: {name}, Age: {age}, Grade: {grade}.
+
+        class Student {
+            name = '';
+            age = '';
+            grade = '';
+
+            constructor (name, age , grade) {
+                this.name = name;
+                this.age = age;
+                this.grade = grade;
+            }
+
+            displayInfo() {
+                console.log(` Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
+            }
+
+        }
+
+        const studentNew = new Student('Alex Shramko ', 39, '11-Б');
+        studentNew.displayInfo();
+
+    </script>
+</body>
+</html>
